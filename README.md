@@ -1,5 +1,5 @@
 # PORT
-#### Pose Relation Transformer Refine Occlusions for Human Pose Estimation
+#### Official PyTorch implementation of **Pose Relation Transformer Refine Occlusions for Human Pose Estimation**. The `model.py` will be available soon.
 
 ## Abstract
 <img width="1025" alt="qualitative" src="https://user-images.githubusercontent.com/37060326/194792799-9315b317-b0b3-4b99-9105-08d96727993a.png">
@@ -49,7 +49,6 @@ Our repository already contains the annotations and mobilenetv2 results on panop
 ## Training and Testing
 - We set the seed number for Numpy and PyTorch as 0 for reproducibility.
 - If you want to change the masking proportion, change `mask_prob` into other value.
-- The `model.py` will be available soon.
 
 This is an example command for training PORT on Panoptic dataset, and refining the result of `mobilenetv2` backbone.
 ```
