@@ -47,7 +47,7 @@ You may want to follow the [instruction of MMPose](https://mmpose.readthedocs.io
 
 After you get the result files of backbones, you have to locate it into `data/` folder as well as annotation files.
 
-For example,
+For example, if you want to refine the result of `mobilenetv2` on `CMU panoptic hand` dataset, the directory should be like the following.
 
 ```
 - data/
@@ -57,7 +57,7 @@ For example,
             - panoptic_train.json
         - mobilenetv2_panoptic_256x256_test.pkl
 ```
-Our repository contains the annotations and mobilenetv2 results on panoptic dataset.
+Our repository already contains the annotations and mobilenetv2 results on panoptic dataset.
 
 ## Training and Testing
 - We set the seed number for Numpy and PyTorch as 0 for reproducibility.
@@ -76,4 +76,4 @@ python train.py --batch_size=128 --dataset=panoptic --epochs=100 --lr=0.001 --ma
 ## Acknowledgements
 We utilized the pre-trained backbones from [MMPose](https://mmpose.readthedocs.io/en/latest/), and our architecture code is based on [CvT](https://github.com/microsoft/CvT).
 
-Thanks to the original authors for their work!s
+Thanks to the original authors for their works!
