@@ -5,32 +5,19 @@
 <img width="1025" alt="qualitative" src="https://user-images.githubusercontent.com/37060326/194792799-9315b317-b0b3-4b99-9105-08d96727993a.png">
 
 
-Accurately estimating the human pose is an essential
-task for many applications in robotics. However, existing
-pose estimation methods suffer from poor performance when
-occlusion occurs. Recent advances in NLP have been very
-successful in predicting the missing words conditioned on visible
-words. We draw upon the sentence completion analogy in NLP
-to guide our model to address occlusions in the pose estimation
-problem. We propose a novel approach that can mitigate the
-effect of occlusions that is motivated by the entence completion
-task of NLP. In an analogous manner, we designed our model
-to reconstruct occluded joints given the visible joints utilizing
-joint correlations by capturing the implicit joint occlusions.
-Our proposed POse Relation Transformer (PORT) captures the
-global context of the pose using self-attention and a local context
-by aggregating adjacent joint features. To train PORT to learn
-joint correlations, we guide PORT to reconstruct randomly
-masked joints, which we call Masked Joint Modeling (MJM).
-PORT trained with MJM adds to existing keypoint detection
-methods and successfully refines occlusions. Notably, PORT is a
-model-agnostic plug-in for pose refinement under occlusion that
-can be plugged into any keypoint detector with substantially
-low computational costs. We conducted extensive experiments
-to demonstrate that PORT mitigates the occlusion effects on the
-hand and body pose estimation. Strikingly, PORT improves the
-pose estimation accuracy of existing human pose estimation
-methods up to 16% with only 5% of additional parameters.
+Accurately estimating the human pose is an essential task for many applications in robotics. However, existing
+pose estimation methods suffer from poor performance when occlusion occurs. Recent advances in NLP have been very
+successful in predicting the missing words conditioned on visible words. We draw upon the sentence completion analogy in NLP
+to guide our model to address occlusions in the pose estimation problem. We propose a novel approach that can mitigate the
+effect of occlusions that is motivated by the entence completion task of NLP. In an analogous manner, we designed our model
+to reconstruct occluded joints given the visible joints utilizing joint correlations by capturing the implicit joint occlusions.
+Our proposed POse Relation Transformer (PORT) captures the global context of the pose using self-attention and a local context
+by aggregating adjacent joint features. To train PORT to learn joint correlations, we guide PORT to reconstruct randomly
+masked joints, which we call Masked Joint Modeling (MJM). PORT trained with MJM adds to existing keypoint detection
+methods and successfully refines occlusions. Notably, PORT is a model-agnostic plug-in for pose refinement under occlusion that
+can be plugged into any keypoint detector with substantially low computational costs. We conducted extensive experiments
+to demonstrate that PORT mitigates the occlusion effects on the hand and body pose estimation. Strikingly, PORT improves the
+pose estimation accuracy of existing human pose estimation methods up to 16% with only 5% of additional parameters.
 
 ## Dependencies
 
@@ -62,7 +49,7 @@ Our repository already contains the annotations and mobilenetv2 results on panop
 ## Training and Testing
 - We set the seed number for Numpy and PyTorch as 0 for reproducibility.
 - If you want to change the masking proportion, change `mask_prob` into other value.
-- The model file will be available soon.
+- The `model.py` will be available soon.
 
 This is an example command for training PORT on Panoptic dataset, and refining the result of `mobilenetv2` backbone.
 ```
