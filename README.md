@@ -1,5 +1,5 @@
 # POse Relation Transformer (PORT)
-Official PyTorch implementation of **Pose Relation Transformer: Refine Occlusions for Human Pose Estimation**. 
+Official PyTorch implementation for **Pose Relation Transformer: Refine Occlusions for Human Pose Estimation**. 
 
 The `model.py` will be available soon!
 
