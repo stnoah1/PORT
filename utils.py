@@ -5,12 +5,7 @@ import torch
 import numpy as np
 import torch.backends.cudnn as cudnn
 
-from models.transformer.vit import ViT
-from models.transformer.gct import GcT
 from models.transformer.cvt import CvT
-from models.transformer.mpp import MPP
-from models.transformer.mae import MAE
-from models.transformer.simmim import SimMIM
 
 from torch.optim import SGD, AdamW
 from torch.utils.data import DataLoader
@@ -34,12 +29,13 @@ def get_dataset(args):
         from data_utils import PanopticDataset
         train_ds = PanopticDataset(
                 args.train_ann_path,
-                args.kpt2d_train_pred_path,
+                None,
+                is_train=True
             )
         valid_ds = PanopticDataset(
                 args.test_ann_path,
                 args.kpt2d_test_pred_path,
-                False
+                is_train=False
             )
         k_set = [1, 5]
         num_joints = 21

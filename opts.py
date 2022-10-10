@@ -31,13 +31,11 @@ def get_parse_args():
 
     # Experimental setting
     parser.add_argument('--random_seed', type=int, default=0)
-    parser.add_argument('--downsample', default=1, type=int, metavar='FACTOR', help='downsample frame rate by factor')
     parser.add_argument('--num_workers', default=4, type=int, metavar='N', help='num of workers for data loading')
     parser.add_argument('--val_freq', default=3, type=int, help='validation frequency')
 
     # Apex
     parser.add_argument('--half', default=True, type=lambda x: (str(x).lower() == 'true'), help='apex')
-    parser.add_argument('--ssl', default=False, type=lambda x: (str(x).lower() == 'true'), help='')
     parser.add_argument('--amp_opt_level', type=int, default=1)
 
     # Transformer
@@ -65,8 +63,6 @@ def get_parse_args():
     parser.add_argument('--train_ann_path', default="data/panoptic/annotations/panoptic_train.json", type=str, metavar='PATH', help='')
     parser.add_argument('--test_ann_path', default="data/panoptic/annotations/panoptic_test.json", type=str, metavar='PATH', help='')
     parser.add_argument('--cam_path', default=None, type=str, metavar='PATH', help='')
-    parser.add_argument('--kpt2d_stat_path', default=None, type=str, metavar='PATH', help='')
-    parser.add_argument('--kpt3d_stat_path', default=None, type=str, metavar='PATH', help='')
     parser.add_argument('--kpt2d_train_pred_path', default=None, type=str, metavar='PATH', help='')
     parser.add_argument('--kpt2d_test_pred_path', default=None, type=str, metavar='PATH', help='')
 
