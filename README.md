@@ -32,6 +32,12 @@ hand and body pose estimation. Strikingly, PORT improves the
 pose estimation accuracy of existing human pose estimation
 methods up to 16% with only 5% of additional parameters.
 
+## Dependencies
+
+- Python >= 3.6
+- PyTorch >= 1.7.0
+- NVIDIA Apex
+- tqdm
 
 ## Data Preparation
 Ideally, PORT can be plugged into any detection-based pose estimation backbone.
